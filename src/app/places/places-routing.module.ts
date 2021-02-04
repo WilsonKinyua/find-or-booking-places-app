@@ -7,19 +7,33 @@ const routes: Routes = [
   {
     path: '',
     component: PlacesPage
+    // redirectTo: "/places/tabs/discover",
+    // pathMatch: 'full'
   },
   {
-    path: 'discover',
+    path: 'tabs/discover',
     loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
   },
   {
-    path: 'offers',
+    path: 'tabs/offers',
     loadChildren: () => import('./offers/offers.module').then( m => m.OffersPageModule)
   },
-  {
-    path: 'placeId',
-    loadChildren: () => import('./discover/place-detail/place-detail.module').then( m => m.PlaceDetailPageModule)
-  }
+  // {
+  //   path: ':placeId',
+  //   loadChildren: () => import('./discover/place-detail/place-detail.module').then( m => m.PlaceDetailPageModule)
+  // },
+  // {
+  //   path: 'new',
+  //   loadChildren: () => import('./offers/new-offer/new-offer.module').then( m => m.NewOfferPageModule)
+  // },
+  // {
+  //   path: 'edit/:placeId',
+  //   loadChildren: () => import('./offers/edit-offer/edit-offer.module').then( m => m.EditOfferPageModule)
+  // },
+  // {
+  //   path: ':placeId',
+  //   loadChildren: () => import('./offers/offer-bookings/offer-bookings.module').then( m => m.OfferBookingsPageModule)
+  // },
 ];
 
 @NgModule({
